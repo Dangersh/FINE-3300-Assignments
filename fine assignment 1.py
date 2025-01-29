@@ -29,7 +29,7 @@ def mortgage_payments(principal, mortgage_rate,amortization):
     accelerated_biweekly_payment = (monthly_payment/2) 
     accelerated_weekly_payment = (monthly_payment/4) 
     
-# 3. Printing Output 
+#  Printing Output 
     print("Monthly Payment:$",round(monthly_payment,2))
     print("semi_monthly_payment:$",round(semi_monthly_payment,2))
     print("bi_weekly_payment:$",round(bi_weekly_payment,2))
