@@ -6,10 +6,10 @@ class Bond:
         self.coupon_payment = (face_value * coupon_rate) / 2  # Semi-annual coupons
 
     def calculate_price(self, market_rate):
-        r = market_rate / 2  # Semi-annual rate
-        n = self.maturity * 2  # Total periods
-        pv_coupons = sum(self.coupon_payment / (1 + r) ** t for t in range(1, n + 1))
-        pv_face_value = self.face_value / (1 + r) ** n
+        Semi_annual_rate = market_rate / 2  # Semi-annual rate
+        Total_periods = self.maturity * 2  # Total periods
+        pv_coupons = sum(self.coupon_payment / (1 + Semi_annual_rate) ** t for t in range(1, Total_periods + 1))
+        pv_face_value = self.face_value / (1 + Semi_annual_rate) ** n
         return pv_coupons + pv_face_value  # Bond price
 
     def compute_current_yield(self, market_price):

@@ -1,9 +1,9 @@
-# 2. This is the section where inputs will be taken
+# This is the section where inputs will be taken
 principal =float(input(('Enter the starting Principal for Balance Balance the Mortgage')))
 mortgage_rate = float(input(('Enter the mortgage rate')))
 amortization_period = float(input(('Enter the amortiization period')))
 
-# 1. Function to calculate mortgage payments 
+# Function to calculate mortgage payments 
 def mortgage_payments(principal, mortgage_rate,amortization):
 # Adjust the annual rate to a semi-annual compound rate
     adj_rate = mortgage_rate/100
