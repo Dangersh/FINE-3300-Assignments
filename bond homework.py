@@ -9,7 +9,7 @@ class Bond:
         Semi_annual_rate = market_rate / 2  # Semi-annual rate
         Total_periods = self.maturity * 2  # Total periods
         pv_coupons = sum(self.coupon_payment / (1 + Semi_annual_rate) ** t for t in range(1, Total_periods + 1))
-        pv_face_value = self.face_value / (1 + Semi_annual_rate) ** n
+        pv_face_value = self.face_value / (1 + Semi_annual_rate) ** Total_periods
         return pv_coupons + pv_face_value  # Bond price
 
     def compute_current_yield(self, market_price):
@@ -27,6 +27,5 @@ bond = Bond(face_value, coupon_rate, maturity)
 market_price = bond.calculate_price(market_rate)
 current_yield = bond.compute_current_yield(market_price)
 
-# Print Results
-print(f"\nBond Price: ${market_price:.2f}")
-print(f"Current Yield: {current_yield:.2%}")
+print("Bond Price:",round(market_price,2))
+print("Current Yield:",round(current_yield,2))
